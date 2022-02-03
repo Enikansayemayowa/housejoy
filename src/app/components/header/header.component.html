@@ -1,0 +1,131 @@
+<div class="head">
+  <nav class="navbar navbar-expand-lg nav1">
+    <div class="container-fluid">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand logo" routerLink="/dashboard"></a>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link partner" routerLink="/signup"
+              ><i class="bi bi-people-fill partner2"></i>Become A Partner</a
+            >
+          </li>
+        </ul>
+
+        <button
+          class="loginbtn"
+          routerLink="/signin"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop"
+        >
+          LOGIN
+        </button>
+        <div class="login">
+          <form class="d-flex search-bar">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <i class="bi bi-search"></i>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="staticBackdrop"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">SIGN IN</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="signinForm" (ngSubmit)="signin()">
+          <div class="form-group mb-3">
+            <label for="exampleFormControlInput1" class="form-label"
+              >Email</label
+            >
+            <input
+              required
+              formControlName="email"
+              type="text"
+              class="form-control form"
+            />
+            <span
+              class="alert alert-danger"
+              *ngIf="
+                signinForm.controls['email'].dirty &&
+                signinForm.hasError('required', 'email')
+              "
+              >this password required</span
+            >
+          </div>
+          <div class="form-group mb-3">
+            <label for="exampleFormControlInput1" class="form-label"
+              >Password</label
+            >
+            <input
+              formControlName="password"
+              type="password"
+              class="form-control"
+            />
+            <span
+              class="text-danger"
+              *ngIf="
+                signinForm.controls['password'].dirty &&
+                signinForm.hasError('required', 'password')
+              "
+            >
+              this password required</span
+            >
+          </div>
+
+          <!-- <button [disabled]="signinForm.invalid" type="submit" class="btn btn-primary" >Sign In</button> -->
+        </form>
+        <a class="newuser" href="">New User ? Sign Up</a>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" [disabled]="signinForm.invalid"  routerLink="/dashboard" id="cancel"  class="btn btn-secondary" data-bs-dismiss="modal">Sign In</button>
+        <!-- <button
+          [disabled]="signinForm.invalid"
+          type="submit"
+          class="btn c"
+          routerLink="/dashboard"
+          id="cancel"
+        >
+          Sign In
+        </button> -->
+      </div>
+    </div>
+  </div>
+</div>
