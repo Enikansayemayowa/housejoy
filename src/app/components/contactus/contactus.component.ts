@@ -12,6 +12,14 @@ export class ContactusComponent implements OnInit {
 
   public contactForm !: FormGroup;
 
+  categories =[
+    {},
+     {id:1, name:'developer'},
+     {id:2, name:'art'},
+     {id:3, name:'comedy'},
+     {id:4, name:'doctor'}
+    ]
+
   constructor(private formBuilder: FormBuilder, private http : HttpClient, private router: Router) { }
 
   ngOnInit(): void {

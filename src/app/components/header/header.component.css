@@ -62,8 +62,11 @@ color: #000000;
     border-radius: 15px;
 }
 .modal-dialog{
-    color: #38006b;
+    color: #ffd700;
 }
 .form{
-    border: 10px bold #38006b;
+    border: 10px bold #ffd700;
+}
+.header2{
+    color: #ffd700;
 }

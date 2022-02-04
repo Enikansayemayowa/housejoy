@@ -18,6 +18,7 @@ import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { PrivacyComponent } from './components/privacy/privacy.component';
 import { ZippyComponent } from './components/zippy/zippy.component';
 import { ContactusComponent } from './components/contactus/contactus.component';
+import { PolicyComponent } from './components/policy/policy.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { ContactusComponent } from './components/contactus/contactus.component';
     PrivacyComponent,
 
     ZippyComponent,
-     ContactusComponent
+     ContactusComponent,
+     PolicyComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,9 @@ import { ContactusComponent } from './components/contactus/contactus.component';
       {path: "signin" , component: LoginComponent },
       {path: "signup" , component: SignupComponent },
       {path: "dashboard" , component: DashboardComponent },
-      {path: "aboutus" , component: AboutusComponent }
+      {path: "aboutus" , component: AboutusComponent },
+      {path: "contactus" , component: ContactusComponent },
+      {path: "ourpolicy" , component: PolicyComponent },
 
     ])
   ],
