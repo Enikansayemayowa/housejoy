@@ -19,6 +19,11 @@ import { PrivacyComponent } from './components/privacy/privacy.component';
 import { ZippyComponent } from './components/zippy/zippy.component';
 import { ContactusComponent } from './components/contactus/contactus.component';
 import { PolicyComponent } from './components/policy/policy.component';
+import { PlumbingComponent } from './components/plumbing/plumbing.component';
+import { ElectricianComponent } from './components/electrician/electrician.component';
+import { AcrepairComponent } from './components/acrepair/acrepair.component';
+import { CapentaryComponent } from './components/capentary/capentary.component';
+import { AddtocartComponent } from './components/addtocart/addtocart.component';
 
 
 @NgModule({
@@ -35,7 +40,12 @@ import { PolicyComponent } from './components/policy/policy.component';
 
     ZippyComponent,
      ContactusComponent,
-     PolicyComponent
+     PolicyComponent,
+     PlumbingComponent,
+     ElectricianComponent,
+     AcrepairComponent,
+     CapentaryComponent,
+     AddtocartComponent
   ],
   imports: [
     BrowserModule,
@@ -52,6 +62,12 @@ import { PolicyComponent } from './components/policy/policy.component';
       {path: "aboutus" , component: AboutusComponent },
       {path: "contactus" , component: ContactusComponent },
       {path: "ourpolicy" , component: PolicyComponent },
+      {path: "addtocart" , component: AddtocartComponent },
+      {path: "electrician" , component: ElectricianComponent },
+      {path: "plumbing" , component: PlumbingComponent },
+      {path: "carpentary" , component: CapentaryComponent },
+      {path: "acrepair" , component: AcrepairComponent },
+      // {path: "acrepair/fan" , component: AcrepairComponent },
 
     ])
   ],
