@@ -12,7 +12,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
-import { Header2Component } from './components/header2/header2.component';
+
 import { FooterComponent } from './components/footer/footer.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { PrivacyComponent } from './components/privacy/privacy.component';
@@ -33,7 +33,7 @@ import { AddtocartComponent } from './components/addtocart/addtocart.component';
     DashboardComponent,
     LoginComponent,
     SignupComponent,
-    Header2Component,
+  
     FooterComponent,
     AboutusComponent,
     PrivacyComponent,
@@ -55,7 +55,7 @@ import { AddtocartComponent } from './components/addtocart/addtocart.component';
     BrowserAnimationsModule,
     CarouselModule,
     RouterModule.forRoot([
-      {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
+      {path: "", redirectTo: 'dashboard', pathMatch: 'full'},
       {path: "signin" , component: LoginComponent },
       {path: "signup" , component: SignupComponent },
       {path: "dashboard" , component: DashboardComponent },

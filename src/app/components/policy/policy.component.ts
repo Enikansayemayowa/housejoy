@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PolicyComponent implements OnInit {
 
+  viewMode = 'map';
+
   constructor() { }
 
   ngOnInit(): void {
